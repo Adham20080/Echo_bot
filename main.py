@@ -32,10 +32,9 @@ async def start(message: types.Message):
 
 @dp.message(F.text.isdigit())
 async def echo(message: types.Message):
-    a = random.randint(1, 11)
+    a = random.randint(1, 10)
     b = message.text
     if a == int(b):
-        print(a)
         await message.reply(f"<b>To'gri topdingiz.</b>", parse_mode="HTML")
     else:
         await message.answer_photo("https://wallpapercave.com/wp/wp6725007.png", caption="O'yin tugadi 😑")
